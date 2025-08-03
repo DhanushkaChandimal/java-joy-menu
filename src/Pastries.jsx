@@ -1,10 +1,8 @@
-const Pastries = () => {
+const Pastries = ({items, header}) => {
     return(
         <div>
-            <h3>Pastries</h3>
-            <p>Croissant</p>
-            <p>Blueberry Mufin</p>
-            <p>Cinnamon Rolls</p>
+            <h3>{header}</h3>
+            {items.map((item, index) => <p key={index}>{item}</p>)}
         </div>
     )
 }

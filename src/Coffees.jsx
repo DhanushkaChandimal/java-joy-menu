@@ -1,10 +1,8 @@
-const Coffees = () => {
+const Coffees = ({items}) => {
     return(
         <div>
             <h3>Coffees</h3>
-            <p>Espresso</p>
-            <p>Cappuccino</p>
-            <p>Espresso</p>
+            {items.map((item, index) => <p key={index}>{item}</p>)}
         </div>
     )
 }
